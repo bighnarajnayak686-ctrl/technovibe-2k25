@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TECHNOVIBE 2K25 — Where Creativity Meets Code</title>
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#6f42c1;
+      --muted:#6c757d;
+    }
+    body{font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+    .hero{background: linear-gradient(180deg, rgba(111,66,193,0.12), rgba(111,66,193,0.04));padding:60px 0}
+    .event-card{border-radius:12px;overflow:hidden;box-shadow:0 8px 30px rgba(50,50,93,0.06)}
+    .accent{color:var(--accent)}
+    .btn-accent{background:var(--accent);border:none;color:#fff}
+    .timeline-step{padding:18px;border-left:3px solid rgba(111,66,193,0.12);margin-left:10px}
+    .gallery-img{height:160px;object-fit:cover;width:100%}
+    footer{background:#f8f9fa;padding:30px 0}
+    @media (max-width:767px){.hero{padding:30px 0}.gallery-img{height:120px}}
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold accent" href="#">TECHNOVIBE 2K25</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-3"><button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1 class="display-5 fw-bold">TECHNOVIBE 2K25</h1>
+          <p class="lead text-muted">Where Creativity Meets Code — Website dev, Coding, Video Editing, Paper Presentation, Dance, Drawing & Free Fire Tournament.</p>
+          <div class="d-flex gap-2 mt-4">
+            <a href="#events" class="btn btn-outline-secondary">Explore Events</a>
+            <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#registerModal">Register Now</button>
+          </div>
+          <ul class="mt-4 list-unstyled text-muted small">
+            <li><strong>Date:</strong> 2–3 Days (Choose the best weekend)</li>
+            <li><strong>Venue:</strong> College Auditorium + Online (Free Fire)</li>
+          </ul>
+        </div>
+        <div class="col-lg-5 text-center mt-4 mt-lg-0">
+          <div class="card event-card p-3">
+            <img src="https://images.unsplash.com/photo-1508873695175-9d6b9bcd6a7e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b5bc2a1" alt="tech" class="img-fluid rounded"/>
+            <div class="p-3">
+              <h5 class="mb-1">Highlighted Event</h5>
+              <p class="text-muted small">Website Development — 3-hour live build challenge. Responsive design + functionality judged.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Team: 2–3</small>
+                <a href="#events" class="small">Learn more →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events" class="py-5">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Events</h2>
+        <small class="text-muted">Click an event to view rules & register</small>
+      </div>
+      <div class="row g-3">
+        <!-- Card: Website Development -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 event-card h-100">
+            <img src="https://images.unsplash.com/photo-1526378722300-4a6e6b0b9e2f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1d4a6c3" class="card-img-top rounded" style="height:170px;object-fit:cover" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Website Development</h5>
+              <p class="card-text text-muted small">Build a responsive website on a given topic. Time: 3 hours. Team: 2–3.</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm btn-outline-primary" onclick="showRules('Website Development', 'Team: 2-3\nTime: 3 hours\nJudging: Design, Responsiveness, Features')">Rules</button>
+                <button class="btn btn-sm btn-accent" onclick="openRegister('Website Development')">Register</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: Coding Challenge -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 event-card h-100">
+            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5c5cd6" class="card-img-top rounded" style="height:170px;object-fit:cover" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Coding Challenge</h5>
+              <p class="card-text text-muted small">MCQ round + Live coding problems. Languages: C/C++/Java/Python</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm btn-outline-primary" onclick="showRules('Coding Challenge', 'Solo event\nRound1: MCQ (20 min)\nRound2: Coding (2 problems)')">Rules</button>
+                <button class="btn btn-sm btn-accent" onclick="openRegister('Coding Challenge')">Register</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: Paper Presentation -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 event-card h-100">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2b4a6b" class="card-img-top rounded" style="height:170px;object-fit:cover" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Paper Presentation</h5>
+              <p class="card-text text-muted small">Topic: AI, Cybersecurity, Cloud, Sustainable Tech. 7 min + 3 min Q&A.</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm btn-outline-primary" onclick="showRules('Paper Presentation', 'Team: 1-2\nTime: 7 min presentation + 3 min Q&A')">Rules</button>
+                <button class="btn btn-sm btn-accent" onclick="openRegister('Paper Presentation')">Register</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Editing -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 event-card h-100">
+            <img src="https://images.unsplash.com/photo-1526178614611-8f22f8c9c1f0?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=6a6b" class="card-img-top rounded" style="height:170px;object-fit:cover" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Video Editing</h5>
+              <p class="card-text text-muted small">Create a 1–3 min clip from given footage. Tools allowed: Premiere, CapCut, VN.</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm btn-outline-primary" onclick="showRules('Video Editing', 'Theme: Motivational / Promo\nTime: 90 mins')">Rules</button>
+                <button class="btn btn-sm btn-accent" onclick="openRegister('Video Editing')">Register</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drawing -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 event-card h-100">
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1c1a" class="card-img-top rounded" style="height:170px;object-fit:cover" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Drawing / Art</h5>
+              <p class="card-text text-muted small">Theme: Digital India / Future Tech. Medium: Paper or Digital. Time: 60 mins.</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm btn-outline-primary" onclick="showRules('Drawing / Art', 'Solo\nTime: 60 minutes\nMedium: Paper/Digital')">Rules</button>
+                <button class="btn btn-sm btn-accent" onclick="openRegister('Drawing / Art')">Register</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dance -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 event-card h-100">
+            <img src="https://images.unsplash.com/photo-1519648023493-d82b5f8d7b2a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=7ea1" class="card-img-top rounded" style="height:170px;object-fit:cover" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Dance</h5>
+              <p class="card-text text-muted small">Solo / Group. Time limit: 4 minutes. Live performance on stage.</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm btn-outline-primary" onclick="showRules('Dance', 'Solo/Group\nTime: Max 4 minutes\nJudging: Expression, Energy, Choreography')">Rules</button>
+                <button class="btn btn-sm btn-accent" onclick="openRegister('Dance')">Register</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Free Fire -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 event-card h-100">
+            <img src="https://images.unsplash.com/photo-1590608897129-79b2b1d5d6e4?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5f5a" class="card-img-top rounded" style="height:170px;object-fit:cover" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Free Fire Tournament</h5>
+              <p class="card-text text-muted small">Squad mode (4 players). Multi-round knockout until final. Online / LAN (organizer decides).</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm btn-outline-primary" onclick="showRules('Free Fire', 'Squad of 4\nFormat: Knockout rounds → Final')">Rules</button>
+                <button class="btn btn-sm btn-accent" onclick="openRegister('Free Fire Tournament')">Register</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section id="schedule" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="mb-3">Schedule</h2>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="card p-3 event-card">
+            <h5 class="mb-3">Day 1 — Technical Focus</h5>
+            <ul class="list-unstyled">
+              <li class="timeline-step">10:00 — Inauguration & Welcome</li>
+              <li class="timeline-step">11:00 — Website Development (Live)</li>
+              <li class="timeline-step">14:30 — Coding Challenge (Round 1 + 2)</li>
+              <li class="timeline-step">17:30 — Paper Presentations</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-3 mt-lg-0">
+          <div class="card p-3">
+            <h6>Day 2 — Creative & Gaming</h6>
+            <ul class="list-unstyled small text-muted">
+              <li>10:00 — Video Editing</li>
+              <li>12:30 — Drawing</li>
+              <li>02:00 — Dance</li>
+              <li>04:00 — Free Fire Finals</li>
+              <li class="mt-2"><strong>Prizes:</strong> 1st: Trophy + ₹2000, 2nd: Medal + ₹1000</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Organizing Team</h2>
+      <div class="row g-3">
+        <div class="col-6 col-md-3 text-center">
+          <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=7f7f" class="rounded-circle" width="110" height="110" alt="org1"/>
+          <h6 class="mt-2 mb-0">Rohit</h6>
+          <small class="text-muted">Event Head</small>
+        </div>
+        <div class="col-6 col-md-3 text-center">
+          <img src="https://images.unsplash.com/photo-1545996124-1b46f5d0a3c6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6e6e" class="rounded-circle" width="110" height="110" alt="org2"/>
+          <h6 class="mt-2 mb-0">Priya</h6>
+          <small class="text-muted">Logistics</small>
+        </div>
+        <div class="col-6 col-md-3 text-center">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=8c8c" class="rounded-circle" width="110" height="110" alt="org3"/>
+          <h6 class="mt-2 mb-0">Aman</h6>
+          <small class="text-muted">Technical</small>
+        </div>
+        <div class="col-6 col-md-3 text-center">
+          <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=9a9a" class="rounded-circle" width="110" height="110" alt="org4"/>
+          <h6 class="mt-2 mb-0">Neha</h6>
+          <small class="text-muted">Media</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="mb-4">Gallery</h2>
+      <div class="row g-2">
+        <div class="col-6 col-md-3"><img src="https://images.unsplash.com/photo-1509099836639-18ba1d3f66c0?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=abc" class="gallery-img rounded shadow-sm" alt="g1"/></div>
+        <div class="col-6 col-md-3"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=def" class="gallery-img rounded shadow-sm" alt="g2"/></div>
+        <div class="col-6 col-md-3"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=ghi" class="gallery-img rounded shadow-sm" alt="g3"/></div>
+        <div class="col-6 col-md-3"><img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=jkl" class="gallery-img rounded shadow-sm" alt="g4"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2>Contact & Venue</h2>
+      <div class="row g-3 mt-3">
+        <div class="col-md-6">
+          <div class="card p-3 event-card">
+            <h6>Organizers</h6>
+            <p class="small text-muted mb-1">Email: technovibe@college.edu</p>
+            <p class="small text-muted mb-1">Phone: +91 98765 43210</p>
+            <p class="small text-muted">Venue: College Auditorium, Main Campus</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <form id="contactForm" onsubmit="submitContact(event)" class="card p-3">
+            <div class="mb-2"><label class="form-label small">Name</label><input required class="form-control" id="cname"/></div>
+            <div class="mb-2"><label class="form-label small">Email</label><input required type="email" class="form-control" id="cemail"/></div>
+            <div class="mb-2"><label class="form-label small">Message</label><textarea required class="form-control" id="cmsg"></textarea></div>
+            <div class="d-flex justify-content-end"><button class="btn btn-accent">Send</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container d-flex justify-content-between align-items-center">
+      <small class="text-muted">© TECHNOVIBE 2K25 — Organized by Student Council</small>
+      <div>
+        <a class="me-2 small text-muted" href="#">Privacy</a>
+        <a class="small text-muted" href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- REGISTER MODAL -->
+  <div class="modal fade" id="registerModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Event Registration</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form id="regForm" onsubmit="submitRegistration(event)">
+          <div class="modal-body">
+            <div class="mb-2"><label class="form-label small">Name</label><input required id="rname" class="form-control"/></div>
+            <div class="mb-2"><label class="form-label small">Email</label><input required type="email" id="remail" class="form-control"/></div>
+            <div class="mb-2"><label class="form-label small">Contact No.</label><input required id="rphone" class="form-control"/></div>
+            <div class="mb-2"><label class="form-label small">Event</label>
+              <select id="revent" class="form-select">
+                <option>Website Development</option>
+                <option>Coding Challenge</option>
+                <option>Paper Presentation</option>
+                <option>Video Editing</option>
+                <option>Drawing / Art</option>
+                <option>Dance</option>
+                <option>Free Fire Tournament</option>
+              </select>
+            </div>
+            <div class="form-text small text-muted">After registration, you'll get a confirmation message here (demo).</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            <button class="btn btn-accent">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- RULES MODAL -->
+  <div class="modal fade" id="rulesModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header"><h5 class="modal-title" id="rulesTitle">Rules</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+        <div class="modal-body" id="rulesBody"></div>
+        <div class="modal-footer"><button class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // show rules in modal
+    function showRules(title, body){
+      document.getElementById('rulesTitle').innerText = title;
+      document.getElementById('rulesBody').innerText = body;
+      var m = new bootstrap.Modal(document.getElementById('rulesModal'));
+      m.show();
+    }
+
+    // open register modal and prefill event
+    function openRegister(eventName){
+      document.getElementById('revent').value = eventName;
+      var m = new bootstrap.Modal(document.getElementById('registerModal'));
+      m.show();
+    }
+
+    // demo registration — save to localStorage (you can replace with API endpoint / Google Forms)
+    function submitRegistration(e){
+      e.preventDefault();
+      const name = document.getElementById('rname').value.trim();
+      const email = document.getElementById('remail').value.trim();
+      const phone = document.getElementById('rphone').value.trim();
+      const event = document.getElementById('revent').value;
+      if(!name || !email) return alert('Please fill required fields');
+      const registrations = JSON.parse(localStorage.getItem('technovibe_regs') || '[]');
+      registrations.push({name,email,phone,event,ts:new Date().toISOString()});
+      localStorage.setItem('technovibe_regs', JSON.stringify(registrations));
+      // show success message and close modal
+      alert('Registration success! This demo stores data locally.');
+      bootstrap.Modal.getInstance(document.getElementById('registerModal')).hide();
+      document.getElementById('regForm').reset();
+      console.log('Registrations saved:', registrations);
+    }
+
+    // contact form (demo)
+    function submitContact(e){
+      e.preventDefault();
+      const name = document.getElementById('cname').value.trim();
+      const email = document.getElementById('cemail').value.trim();
+      const msg = document.getElementById('cmsg').value.trim();
+      if(!name||!email||!msg) return alert('Please fill all fields');
+      alert('Message sent! (Demo — implement backend to receive.)');
+      document.getElementById('contactForm').reset();
+    }
+
+  </script>
+</body>
+</html>
