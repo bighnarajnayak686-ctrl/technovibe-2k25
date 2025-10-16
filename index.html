@@ -42,77 +42,94 @@
       </div>
     </div>
   </nav>
+  
+<!-- HERO -->
+<section class="hero py-5" style="background: linear-gradient(180deg, rgba(111,66,193,0.15), rgba(111,66,193,0.05));">
+  <div class="container">
+    <div class="row align-items-center">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-7">
-          <h1 class="display-5 fw-bold">TECHNOVIBE 2K25</h1>
-          <p class="lead text-muted">Where Creativity Meets Code — Website dev, Coding, Video Editing, Paper Presentation, Dance, Drawing & Free Fire Tournament.</p>
-          <div class="d-flex gap-2 mt-4">
-            <a href="#events" class="btn btn-outline-secondary">Explore Events</a>
-            <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#registerModal">Register Now</button>
-          </div>
-          <ul class="mt-4 list-unstyled text-muted small">
-            <li><strong>Date:</strong> 2–3 Days (Choose the best weekend)</li>
-            <li><strong>Venue:</strong> College Auditorium + Online (Free Fire)</li>
-          </ul>
+      <!-- Left Side Text -->
+      <div class="col-lg-7">
+        <h1 class="display-5 fw-bold text-dark">TECHNOVIBE 2K25</h1>
+        <p class="lead text-muted">
+          Where Creativity Meets Code — Website Dev, Coding, Video Editing, Paper Presentation, Dance, Drawing & Free Fire Tournament.
+        </p>
+        <div class="d-flex gap-2 mt-4">
+          <a href="#events" class="btn btn-outline-secondary">Explore Events</a>
+          <button class="btn btn-accent btn-primary text-white" data-bs-toggle="modal" data-bs-target="#registerModal">Register Now</button>
         </div>
-        <div class="col-lg-5 text-center mt-4 mt-lg-0">
-          <div class="card event-card p-3">
-            <img src="https://images.unsplash.com/photo-1508873695175-9d6b9bcd6a7e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b5bc2a1" alt="tech" class="img-fluid rounded"/>
-            <div class="p-3">
-              <h5 class="mb-1">Highlighted Event</h5>
-              <p class="text-muted small">Website Development — 3-hour live build challenge. Responsive design + functionality judged.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted">Team: 2–3</small>
-                <a href="#events" class="small">Learn more →</a>
-              </div>
+        <ul class="mt-4 list-unstyled text-muted small">
+          <li><strong>Date:</strong> 2–3 Days (Choose the best weekend)</li>
+          <li><strong>Venue:</strong> College Auditorium + Online (Free Fire)</li>
+        </ul>
+      </div>
+
+      <!-- Right Side Image Card -->
+      <div class="col-lg-5 text-center mt-4 mt-lg-0">
+        <div class="card event-card p-3 shadow-lg border-0 rounded-4">
+          <img 
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" 
+            alt="Tech Event" 
+            class="img-fluid rounded-4 hero-img"
+          />
+          <div class="p-3">
+            <h5 class="mb-1 fw-semibold">Highlighted Event</h5>
+            <p class="text-muted small mb-2">
+              Website Development — 3-hour live build challenge. Responsive design + functionality judged.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-muted">Team: 2–3</small>
+              <a href="#events" class="small text-primary text-decoration-none">Learn more →</a>
             </div>
           </div>
         </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- EVENTS -->
-  <section id="events" class="py-5">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2>Events</h2>
-        <small class="text-muted">Click an event to view rules & register</small>
+
+<!-- EVENTS -->
+<section id="events" class="py-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="fw-bold">Events</h2>
+      <small class="text-muted">Click an event to view rules & register</small>
+    </div>
+
+    <div class="row g-3">
+      <!-- Card: Website Development -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-3 event-card h-100 shadow-sm border-0 rounded-4">
+          <img 
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" 
+            alt="Website Development" 
+            class="card-img-top rounded-4 event-img"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-semibold">Website Development</h5>
+            <p class="card-text text-muted small mb-3">
+              Build a responsive website on a given topic. Time: 3 hours. Team: 2–3.
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <button class="btn btn-sm btn-outline-primary" 
+                      onclick="showRules('Website Development', 'Team: 2–3\nTime: 3 hours\nJudging: Design, Responsiveness, Features')">
+                Rules
+              </button>
+              <button class="btn btn-sm btn-accent text-white" 
+                      onclick="openRegister('Website Development')">
+                Register
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="row g-3">
-        <!-- Card: Website Development -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card p-3 event-card h-100">
-            <img src="https://images.unsplash.com/photo-1526378722300-4a6e6b0b9e2f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1d4a6c3" class="card-img-top rounded" style="height:170px;object-fit:cover" />
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Website Development</h5>
-              <p class="card-text text-muted small">Build a responsive website on a given topic. Time: 3 hours. Team: 2–3.</p>
-              <div class="mt-auto d-flex justify-content-between align-items-center">
-                <button class="btn btn-sm btn-outline-primary" onclick="showRules('Website Development', 'Team: 2-3\nTime: 3 hours\nJudging: Design, Responsiveness, Features')">Rules</button>
-                <button class="btn btn-sm btn-accent" onclick="openRegister('Website Development')">Register</button>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Add other event cards below -->
+    </div>
+  </div>
+</section>
 
-        <!-- Card: Coding Challenge -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card p-3 event-card h-100">
-            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5c5cd6" class="card-img-top rounded" style="height:170px;object-fit:cover" />
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Coding Challenge</h5>
-              <p class="card-text text-muted small">MCQ round + Live coding problems. Languages: C/C++/Java/Python</p>
-              <div class="mt-auto d-flex justify-content-between align-items-center">
-                <button class="btn btn-sm btn-outline-primary" onclick="showRules('Coding Challenge', 'Solo event\nRound1: MCQ (20 min)\nRound2: Coding (2 problems)')">Rules</button>
-                <button class="btn btn-sm btn-accent" onclick="openRegister('Coding Challenge')">Register</button>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <!-- Card: Paper Presentation -->
         <div class="col-md-6 col-lg-4">
